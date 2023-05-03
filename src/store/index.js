@@ -1,4 +1,5 @@
 import {applyMiddleware, compose, createStore} from 'redux'
+//thunk中间件处理异步逻辑 （考虑使用RTK进行重构）
 import thunk from 'redux-thunk'
 import reducer from './reducer'
 
