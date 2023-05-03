@@ -1,7 +1,9 @@
 import React from "react"
 //轮播图组件
-import Slider from "../../components/slider";
-import RecommendList from "../../components/list";
+import Slider from "../../components/slider"
+import RecommendList from "../../components/list"
+import {Content} from "./style"
+import Scroll from "../../baseUI/scroll"
 
 function Recommend() {
 
@@ -18,10 +20,14 @@ function Recommend() {
     })
 
     return (
-        <div>
-            <Slider bannerList={bannerList}/>
-            <RecommendList recommendList={recommendList}/>
-        </div>
+        <Content>
+            <Scroll className="list">
+                <div>
+                    <Slider bannerList={bannerList}></Slider>
+                    <RecommendList recommendList={recommendList}></RecommendList>
+                </div>
+            </Scroll>
+        </Content>
 
     )
 }
