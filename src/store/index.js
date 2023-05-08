@@ -1,12 +1,10 @@
-import {applyMiddleware, compose, createStore} from 'redux'
-//thunk中间件处理异步逻辑 （考虑使用RTK进行重构）
-import thunk from 'redux-thunk'
-import reducer from './reducer'
+import {configureStore} from "@reduxjs/toolkit"
+import recommendReducer from "../application/Recommend/store/recommned"
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = configureStore({
+    reducer: {
+        recommend: recommendReducer
+    }
+})
 
-const store = createStore(reducer, composeEnhancers(
-    applyMiddleware(thunk)
-));
-
-export default store;
+export default store
