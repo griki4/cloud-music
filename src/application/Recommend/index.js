@@ -10,6 +10,8 @@ import {forceCheck} from 'react-lazyload'
 import Loading from "../../baseUI/loading"
 
 function Recommend() {
+
+    //获取redux存储的数据
     const {bannerList, recommendList, enterLoading} = useSelector((state) => {
         return {
             bannerList: state.recommend.bannerList,

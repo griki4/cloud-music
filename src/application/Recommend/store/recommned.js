@@ -7,6 +7,7 @@ const initialState = {
     enterLoading: true
 }
 
+//定义获取数据的请求函数，并在请求完成时将数据存储到redux的store中
 export const getBannerList = createAsyncThunk(
     'getBannerListRequest',
     async (args, {dispatch}) => {
